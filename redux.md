@@ -1,0 +1,21 @@
+
+
+### 划分reducer
+
+在一个复杂的尤其是单页面的应用中，为了提高开发效率，我们都会采取协同开发的模式，因为系统的模块较多，各个大的功能板块都较为独立，而redux有一个思想：单一数据源，也就是store只能有一个。
+
+所以，我们多会使用划分reducer的方法，将每个大板块所需维护的状态划分在不同的reducer中去管理，分别有自己的一套结构，再通过combineReducers合并在一起
+
+需要注意的是，划分reducer之后，store会将数据也去根据划分之后的reducer来进行分开的管理
+
+
+
+#### 小问题
+
+准备让一个input去更改一条状态，当状态改变的时候还要更改input的value值
+
+因为有初始状态，相当于input的默认的value值，所以我们使用了defaultValue，但是发现，当数据更改之后，defaultValue不能做到利用更改后的状态重新设置input的value，因为defaultValue只能设置默认的value值，最后换成了value才做到这一点
+
+如果只是想要设置默认value，并且不考虑依靠数据的改变再去更改input的value值的话，使用defaultValue
+
+其他情况使用value

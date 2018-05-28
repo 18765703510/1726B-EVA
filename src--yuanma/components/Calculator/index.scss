@@ -1,0 +1,17 @@
+
+.calculator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .expression {
+        display: flex;
+        align-items: center;
+        input {
+            display: inline-block;
+            width: 80px;
+        }
+        button {
+            margin: 0px 15px;
+        }
+    }
+}

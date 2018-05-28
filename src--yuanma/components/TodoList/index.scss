@@ -1,0 +1,17 @@
+
+.list-group-item {
+    &.finished {
+        color: rgb(185, 184, 184);
+        span {
+            text-decoration: line-through;
+        }
+    }
+
+    input { 
+        margin-right: 5px
+    }
+}
+
+label {
+    margin: 0px 10px;
+}
